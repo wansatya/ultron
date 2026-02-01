@@ -12,7 +12,7 @@ A lightweight task automation system that uses CPU-based machine learning models
 ## One-Line Install
 
 ```bash
-curl -sSL https://raw.githubusercontent.com/YOUR_USERNAME/ultron/main/install.sh | bash
+curl -sSL https://raw.githubusercontent.com/wansatya/ultron/main/install.sh | bash
 ```
 
 Then:
@@ -43,7 +43,7 @@ cd ~/ultron && ./run_ultron.sh
 
 ```bash
 # One-line install
-curl -sSL https://raw.githubusercontent.com/YOUR_USERNAME/ultron/main/install.sh | bash
+curl -sSL https://raw.githubusercontent.com/wansatya/ultron/main/install.sh | bash
 cd ~/ultron
 
 # Or manual
@@ -307,7 +307,7 @@ Add unlimited intents by creating skills:
 
 **Method 1: Automated**
 ```bash
-curl -sSL https://raw.githubusercontent.com/YOUR_USERNAME/ultron/main/install.sh | bash
+curl -sSL https://raw.githubusercontent.com/wansatya/ultron/main/install.sh | bash
 ```
 
 **Method 2: Manual**

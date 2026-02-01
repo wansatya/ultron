@@ -1,6 +1,6 @@
 #!/bin/bash
 # Ultron Installation Script
-# Usage: curl -sSL https://raw.githubusercontent.com/YOUR_USERNAME/ultron/main/install.sh | bash
+# Usage: curl -sSL https://raw.githubusercontent.com/wansatya/ultron/main/install.sh | bash
 
 set -e
 
