@@ -1,0 +1,55 @@
+============================================================
+ULTRON v0.2.0 - LATEST CHANGES
+============================================================
+
+MULTI-PLATFORM SUPPORT ADDED
+----------------------------
+✅ Discord bot (discord.py)
+✅ Slack bot (slack-bolt)
+✅ WhatsApp bot (webwhatsapi)
+✅ All platforms run concurrently
+✅ Shared ML models across platforms
+
+DYNAMIC SKILLS SYSTEM ADDED
+---------------------------
+✅ Drop Python file in skills/ directory
+✅ Auto-registers as intent + tool
+✅ 3 example skills included:
+   - Weather (wttr.in API)
+   - Time/Date (built-in)
+   - Calculator (math eval)
+
+FILES CREATED
+-------------
+Platforms: 4 bot implementations + base interface
+Skills: 3 system files + 3 examples
+Documentation: Consolidated into README.md
+
+CONFIGURATION UPDATED
+--------------------
+New platforms section:
+  platforms:
+    telegram: {...}
+    discord: {...}
+    slack: {...}
+    whatsapp: {...}
+
+New skills section:
+  skills:
+    enabled: true
+    directory: "./skills"
+
+USAGE
+-----
+1. Enable platforms in config.yaml
+2. Set bot tokens via environment variables
+3. Install optional deps: pip install discord.py slack-bolt
+4. Run: python -m ultron.main
+
+To add skills:
+1. Copy examples: cp skills/examples/*.py skills/
+2. Or create your own in skills/
+3. Restart Ultron
+
+READY TO USE!
+============================================================

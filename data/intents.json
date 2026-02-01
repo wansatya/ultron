@@ -1,0 +1,75 @@
+{
+  "intents": [
+    {
+      "name": "execute_command",
+      "description": "Execute a shell command",
+      "examples": [
+        "run ls -la",
+        "execute docker ps",
+        "run the backup script",
+        "check disk space"
+      ],
+      "tool": "system.exec",
+      "entities": ["command"]
+    },
+    {
+      "name": "read_file",
+      "description": "Read file contents",
+      "examples": [
+        "read /etc/hosts",
+        "show me config.json",
+        "what's in the log file",
+        "cat README.md"
+      ],
+      "tool": "system.read",
+      "entities": ["file_path"]
+    },
+    {
+      "name": "write_file",
+      "description": "Write to a file",
+      "examples": [
+        "write 'hello' to test.txt",
+        "create a file called notes.md",
+        "save this to output.json"
+      ],
+      "tool": "system.write",
+      "entities": ["file_path", "content"]
+    },
+    {
+      "name": "web_fetch",
+      "description": "Fetch web content",
+      "examples": [
+        "fetch https://example.com",
+        "scrape the weather from wttr.in",
+        "get the content of that URL",
+        "what's on hacker news"
+      ],
+      "tool": "web.fetch",
+      "entities": ["url"]
+    },
+    {
+      "name": "web_search",
+      "description": "Search the web",
+      "examples": [
+        "search for python tutorials",
+        "google 'best restaurants near me'",
+        "find information about docker",
+        "look up the weather in SF"
+      ],
+      "tool": "web.search",
+      "entities": ["query"]
+    },
+    {
+      "name": "chat",
+      "description": "General conversation",
+      "examples": [
+        "hello",
+        "how are you",
+        "thanks",
+        "what can you do"
+      ],
+      "tool": "response.generate",
+      "entities": []
+    }
+  ]
+}

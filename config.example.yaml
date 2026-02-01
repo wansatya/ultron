@@ -1,0 +1,91 @@
+# Ultron Configuration Example
+# Copy this to config.yaml and customize as needed
+
+# Messaging Platforms
+# Enable the platforms you want to use
+platforms:
+  # Telegram
+  telegram:
+    enabled: true
+    # Get token from @BotFather on Telegram
+    bot_token: "${TELEGRAM_BOT_TOKEN}"
+    # Optional: List of allowed user IDs (empty = allow all)
+    allowed_users: []
+    # Example: allowed_users: [123456789, 987654321]
+
+  # Discord
+  discord:
+    enabled: false
+    # Get token from Discord Developer Portal
+    # https://discord.com/developers/applications
+    bot_token: "${DISCORD_BOT_TOKEN}"
+    allowed_users: []
+
+  # Slack
+  slack:
+    enabled: false
+    # Get tokens from Slack API Dashboard
+    # https://api.slack.com/apps
+    bot_token: "${SLACK_BOT_TOKEN}"      # Bot User OAuth Token
+    app_token: "${SLACK_APP_TOKEN}"      # App-Level Token (for Socket Mode)
+    allowed_users: []
+
+  # WhatsApp
+  whatsapp:
+    enabled: false
+    # Session storage (QR code login persists here)
+    profile_path: "./data/whatsapp_session"
+    allowed_users: []
+    # Note: Requires scanning QR code on first run
+
+# Models
+models:
+  intent_classifier:
+    # Zero-shot classification model
+    model_name: "facebook/bart-large-mnli"
+    device: "cpu"  # Use "cuda" if you have GPU
+    batch_size: 1
+
+  response_generator:
+    # Text generation model
+    model_name: "google/flan-t5-small"
+    device: "cpu"  # Use "cuda" if you have GPU
+    max_length: 256
+
+# Tools
+tools:
+  system:
+    enabled: true
+
+    # Sandbox mode (not implemented yet)
+    sandbox: false
+
+    # Command whitelist (empty = allow all)
+    allowed_commands: []
+    # Example: allowed_commands: ["ls", "pwd", "cat", "echo"]
+
+  web:
+    enabled: true
+    timeout: 10  # seconds
+    user_agent: "Ultron/1.0"
+
+# Sessions
+sessions:
+  # Where to store session files
+  storage_path: "./data/sessions"
+
+  # Maximum messages to keep in history
+  max_history: 50
+
+  # Reset session on error (not recommended)
+  reset_on_error: false
+
+# Skills
+skills:
+  # Enable dynamic skill loading
+  enabled: true
+
+  # Directory to load skills from
+  directory: "./skills"
+
+  # Skills can be Python files or directories with skill.py

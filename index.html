@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CampShure Ultron | Intent Classification That Does Things</title>
+  <meta name="description"
+    content="CampShure's Ultron is a next-generation intent classification engine that goes beyond conversation to actual execution.">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Outfit', 'sans-serif'],
+            display: ['Space Grotesk', 'sans-serif'],
+          },
+          colors: {
+            primary: '#00f2fe',
+            secondary: '#4facfe',
+            accent: '#a855f7',
+            dark: '#0f172a',
+            darker: '#020617',
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    .glass {
+      background: rgba(255, 255, 255, 0.03);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .hero-gradient {
+      background: radial-gradient(circle at center, rgba(168, 85, 247, 0.15) 0%, transparent 70%);
+    }
+
+    .text-gradient {
+      background: linear-gradient(to right, #00f2fe, #4facfe, #a855f7);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .bg-ultron {
+      background-image: url('ultron_hero_bg.png');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
+
+    .animate-float {
+      animation: float 6s ease-in-out infinite;
+    }
+
+    @keyframes float {
+
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-20px);
+      }
+    }
+
+    .faq-item[open] summary {
+      color: #00f2fe;
+    }
+
+    .faq-item summary::-webkit-details-marker {
+      display: none;
+    }
+
+    ::-webkit-scrollbar {
+      width: 1px;
+    }
+  </style>
+</head>
+
+<body class="bg-darker text-white font-sans selection:bg-primary selection:text-dark">
+
+  <!-- Navigation -->
+  <nav class="fixed w-full z-50 py-6 px-4 md:px-12 transition-all duration-300">
+    <div class="max-w-7xl mx-auto flex justify-between items-center glass rounded-2xl px-8 py-4">
+      <div class="flex items-center space-x-2">
+        <div
+          class="w-10 h-10 bg-gradient-to-br from-primary to-accent rounded-lg flex items-center justify-center shadow-lg shadow-primary/20">
+          <i class="fas fa-robot text-dark text-xl"></i>
+        </div>
+        <span class="font-display font-bold text-2xl tracking-tight">ULTRON</span>
+      </div>
+
+      <div class="hidden md:flex space-x-8 items-center text-sm font-medium tracking-wide">
+        <a href="#features" class="hover:text-primary transition-colors">Features</a>
+        <a href="#about" class="hover:text-primary transition-colors">How it Works</a>
+        <a href="#faq" class="hover:text-primary transition-colors">FAQ</a>
+        <a href="#"
+          class="bg-gradient-to-r from-primary to-secondary text-dark px-6 py-2.5 rounded-full hover:shadow-lg hover:shadow-primary/30 transition-all font-bold">Get
+          Started</a>
+      </div>
+
+      <button class="md:hidden text-2xl">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="relative min-h-screen flex items-center pt-20 overflow-hidden bg-ultron">
+    <div class="absolute inset-0 bg-darker/70"></div>
+    <div class="absolute inset-0 hero-gradient"></div>
+
+    <div class="container mx-auto px-6 relative z-10">
+      <div class="flex flex-col items-center text-center space-y-8 max-w-4xl mx-auto">
+        <div
+          class="inline-flex items-center space-x-2 bg-white/5 border border-white/10 px-4 py-2 rounded-full mb-4 animate-bounce">
+          <span class="w-2 h-2 bg-primary rounded-full"></span>
+          <span class="text-xs font-semibold tracking-widest uppercase">Version 2.0 Now Live</span>
+        </div>
+
+        <h1 class="font-display text-5xl md:text-8xl font-bold leading-tight">
+          Intent Classification <br>
+          <span class="text-gradient">That Does Things.</span>
+        </h1>
+
+        <p class="text-xl text-slate-300 max-w-2xl leading-relaxed">
+          Ultron isn't just another chatbot. It's a sophisticated execution engine that understands your
+          intent and bridges the gap between natural language and system actions.
+        </p>
+
+        <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-6 pt-4">
+          <a href="#features"
+            class="px-10 py-4 bg-gradient-to-r from-primary to-secondary text-dark font-bold rounded-xl shadow-xl shadow-primary/20 hover:scale-105 transition-transform">
+            Explore Capabilities <i class="fas fa-arrow-right ml-2"></i>
+          </a>
+          <a href="#"
+            class="px-10 py-4 glass text-white font-bold rounded-xl border border-white/10 hover:border-white/30 transition-all">
+            View Sandbox
+          </a>
+        </div>
+
+        <div
+          class="pt-12 grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-16 opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
+          <div class="flex flex-col items-center">
+            <i class="fab fa-python text-3xl mb-2"></i>
+            <span class="text-[10px] font-bold uppercase tracking-widest">Python 3.10+</span>
+          </div>
+          <div class="flex flex-col items-center">
+            <i class="fas fa-brain text-3xl mb-2"></i>
+            <span class="text-[10px] font-bold uppercase tracking-widest">Neural Nets</span>
+          </div>
+          <div class="flex flex-col items-center">
+            <i class="fas fa-terminal text-3xl mb-2"></i>
+            <span class="text-[10px] font-bold uppercase tracking-widest">Shell Exec</span>
+          </div>
+          <div class="flex flex-col items-center">
+            <i class="fas fa-shield-alt text-3xl mb-2"></i>
+            <span class="text-[10px] font-bold uppercase tracking-widest">Secure IO</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Decoration bits -->
+    <div class="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-darker to-transparent"></div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features" class="py-24 relative bg-darker">
+    <div class="container mx-auto px-6">
+      <div class="flex flex-col items-center text-center mb-20">
+        <h2 class="font-display text-4xl md:text-5xl font-bold mb-4">Core Capabilities</h2>
+        <div class="h-1.5 w-24 bg-gradient-to-r from-primary to-accent rounded-full"></div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Feature 1 -->
+        <div class="glass p-10 rounded-3xl hover:border-primary/30 transition-all group">
+          <div
+            class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
+            <i class="fas fa-network-wired text-3xl text-primary"></i>
+          </div>
+          <h3 class="text-2xl font-bold mb-4 group-hover:text-primary transition-colors">Multi-Platform
+          </h3>
+          <p class="text-slate-400 leading-relaxed">
+            Control your system from Discord, Telegram, Slack, or WhatsApp simultaneously. One brain, multiple access
+            points for seamless orchestration.
+          </p>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="glass p-10 rounded-3xl hover:border-accent/30 transition-all group">
+          <div
+            class="w-16 h-16 bg-accent/10 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
+            <i class="fas fa-puzzle-piece text-3xl text-accent"></i>
+          </div>
+          <h3 class="text-2xl font-bold mb-4 group-hover:text-accent transition-colors">Dynamic Skills
+          </h3>
+          <p class="text-slate-400 leading-relaxed">
+            Add new capabilities instantly. Drop a Python file in the skills directory to hot-load new features without
+            restarting the core engine.
+          </p>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="glass p-10 rounded-3xl hover:border-secondary/30 transition-all group">
+          <div
+            class="w-16 h-16 bg-secondary/10 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
+            <i class="fas fa-microchip text-3xl text-secondary"></i>
+          </div>
+          <h3 class="text-2xl font-bold mb-4 group-hover:text-secondary transition-colors">Intelligent Extraction
+          </h3>
+          <p class="text-slate-400 leading-relaxed">
+            Highly accurate entity extraction pulled directly from natural language. Ultron identifies URLs, paths, and
+            commands with surgical precision.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How it Works Section -->
+  <section id="about" class="py-24 relative overflow-hidden">
+    <div class="container mx-auto px-6">
+      <div class="flex flex-col lg:flex-row items-center gap-16">
+        <div class="lg:w-1/2">
+          <h2 class="font-display text-4xl md:text-5xl font-bold mb-8">Simple but <span
+              class="text-gradient">Powerful</span></h2>
+
+          <div class="space-y-8">
+            <div class="flex gap-6">
+              <div
+                class="flex-shrink-0 w-12 h-12 glass rounded-full flex items-center justify-center border-primary/20 text-primary font-bold">
+                1</div>
+              <div>
+                <h4 class="text-xl font-bold mb-2">Intent Mapping</h4>
+                <p class="text-slate-400 font-light">User message is converted to an embedding and
+                  compared against predefined intent manifolds.</p>
+              </div>
+            </div>
+
+            <div class="flex gap-6">
+              <div
+                class="flex-shrink-0 w-12 h-12 glass rounded-full flex items-center justify-center border-accent/20 text-accent font-bold">
+                2</div>
+              <div>
+                <h4 class="text-xl font-bold mb-2">Entity Extraction</h4>
+                <p class="text-slate-400 font-light">The engine automatically extracts parameters like file paths, URLs,
+                  or search queries from your conversational input.</p>
+              </div>
+            </div>
+
+            <div class="flex gap-6">
+              <div
+                class="flex-shrink-0 w-12 h-12 glass rounded-full flex items-center justify-center border-secondary/20 text-secondary font-bold">
+                3</div>
+              <div>
+                <h4 class="text-xl font-bold mb-2">Multi-Channel Delivery</h4>
+                <p class="text-slate-400 font-light">Responses and logs are delivered back to you across all active
+                  sessions, from Telegram to Discord, in real-time.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:w-1/2 w-full">
+          <div class="glass p-8 rounded-3xl border border-white/10 shadow-2xl relative overflow-hidden group">
+            <div class="flex items-center justify-between mb-6 border-b border-white/5 pb-4">
+              <div class="flex space-x-2">
+                <div class="w-3 h-3 rounded-full bg-red-500/50"></div>
+                <div class="w-3 h-3 rounded-full bg-yellow-500/50"></div>
+                <div class="w-3 h-3 rounded-full bg-green-500/50"></div>
+              </div>
+              <div class="text-xs font-mono text-slate-500">ultron-engine --active</div>
+            </div>
+
+            <div class="font-mono text-sm space-y-4">
+              <div class="flex space-x-3">
+                <span class="text-primary tracking-tighter">&gt;</span>
+                <span class="text-slate-200">show me the config file</span>
+              </div>
+              <div class="bg-white/5 p-4 rounded-lg border border-white/5 text-xs text-slate-400 italic">
+                [INFO] Intent Classified: file_read (Confidence: 0.98)<br>
+                [INFO] Executing tool: read(file='config.json')
+              </div>
+              <div class="text-green-400 border-l-2 border-green-400/30 pl-4 py-2 bg-green-400/5 rounded-r">
+                <pre>{
+  "intents": [...],
+  "models": {
+    "classifier": "distilbert"
+  }
+}</pre>
+              </div>
+              <div class="animate-pulse flex items-center">
+                <span class="w-2 h-5 bg-primary"></span>
+              </div>
+            </div>
+
+            <!-- Floating elements -->
+            <div class="absolute -top-10 -right-10 w-40 h-40 bg-primary/10 blur-3xl rounded-full"></div>
+            <div class="absolute -bottom-10 -left-10 w-40 h-40 bg-accent/10 blur-3xl rounded-full"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section id="faq" class="py-24 bg-darker/50">
+    <div class="container mx-auto px-6 max-w-4xl">
+      <div class="flex flex-col items-center text-center mb-16">
+        <h2 class="font-display text-4xl md:text-5xl font-bold mb-4">Frequently Asked Questions</h2>
+        <div class="h-1.5 w-24 bg-gradient-to-r from-accent to-primary rounded-full"></div>
+      </div>
+
+      <div class="space-y-4">
+        <details class="faq-item group glass rounded-2xl overflow-hidden border border-white/5 transition-all">
+          <summary class="flex items-center justify-between p-6 cursor-pointer list-none">
+            <span class="text-lg font-semibold pr-4">What exactly is CampShure's Ultron?</span>
+            <div
+              class="w-6 h-6 flex items-center justify-center rounded-full border border-white/10 group-open:rotate-180 transition-transform">
+              <i class="fas fa-chevron-down text-xs"></i>
+            </div>
+          </summary>
+          <div class="px-6 pb-6 text-slate-400 leading-relaxed">
+            Ultron is a specialized agentic framework focused on high-precision intent classification.
+            Unlike general-purpose LLMs that might hallucinate or struggle with specific system tasks,
+            Ultron is designed to map natural language directly to actionable tools with extreme
+            reliability.
+          </div>
+        </details>
+
+        <details class="faq-item group glass rounded-2xl overflow-hidden border border-white/5 transition-all">
+          <summary class="flex items-center justify-between p-6 cursor-pointer list-none">
+            <span class="text-lg font-semibold pr-4">How does the intent classification work?</span>
+            <div
+              class="w-6 h-6 flex items-center justify-center rounded-full border border-white/10 group-open:rotate-180 transition-transform">
+              <i class="fas fa-chevron-down text-xs"></i>
+            </div>
+          </summary>
+          <div class="px-6 pb-6 text-slate-400 leading-relaxed">
+            We use a DistilBERT-based model to generate sentence embeddings for every user query. These
+            embeddings are then compared using cosine similarity against a database of intention centroids.
+            This allows for near-instant classification and high confidence scores even with subtle phrasing
+            variations.
+          </div>
+        </details>
+
+        <details class="faq-item group glass rounded-2xl overflow-hidden border border-white/5 transition-all">
+          <summary class="flex items-center justify-between p-6 cursor-pointer list-none">
+            <span class="text-lg font-semibold pr-4">Which messaging platforms are supported?</span>
+            <div
+              class="w-6 h-6 flex items-center justify-center rounded-full border border-white/10 group-open:rotate-180 transition-transform">
+              <i class="fas fa-chevron-down text-xs"></i>
+            </div>
+          </summary>
+          <div class="px-6 pb-6 text-slate-400 leading-relaxed">
+            Ultron currently features primary integration with Telegram. Our roadmap includes upcoming support for
+            WhatsApp, Discord, and Slack, allowing you to control your system from your favorite messaging apps.
+          </div>
+        </details>
+
+        <details class="faq-item group glass rounded-2xl overflow-hidden border border-white/5 transition-all">
+          <summary class="flex items-center justify-between p-6 cursor-pointer list-none">
+            <span class="text-lg font-semibold pr-4">Does Ultron require a high-end GPU?</span>
+            <div
+              class="w-6 h-6 flex items-center justify-center rounded-full border border-white/10 group-open:rotate-180 transition-transform">
+              <i class="fas fa-chevron-down text-xs"></i>
+            </div>
+          </summary>
+          <div class="px-6 pb-6 text-slate-400 leading-relaxed">
+            Not at all. Ultron is engineered to be CPU-friendly. All our models, including DistilBERT and Flan-T5, are
+            optimized to run efficiently on standard consumer hardware without the need for dedicated GPU acceleration.
+          </div>
+        </details>
+
+        <details class="faq-item group glass rounded-2xl overflow-hidden border border-white/5 transition-all">
+          <summary class="flex items-center justify-between p-6 cursor-pointer list-none">
+            <span class="text-lg font-semibold pr-4">How fast is the execution loop?</span>
+            <div
+              class="w-6 h-6 flex items-center justify-center rounded-full border border-white/10 group-open:rotate-180 transition-transform">
+              <i class="fas fa-chevron-down text-xs"></i>
+            </div>
+          </summary>
+          <div class="px-6 pb-6 text-slate-400 leading-relaxed">
+            On typical hardware, the entire cycle—from intent classification to tool execution and response
+            generation—takes between 2 to 3 seconds. This provides a near-instantaneous feedback loop for your system
+            commands.
+          </div>
+        </details>
+
+        <details class="faq-item group glass rounded-2xl overflow-hidden border border-white/5 transition-all">
+          <summary class="flex items-center justify-between p-6 cursor-pointer list-none">
+            <span class="text-lg font-semibold pr-4">Is it safe to let it execute shell commands?</span>
+            <div
+              class="w-6 h-6 flex items-center justify-center rounded-full border border-white/10 group-open:rotate-180 transition-transform">
+              <i class="fas fa-chevron-down text-xs"></i>
+            </div>
+          </summary>
+          <div class="px-6 pb-6 text-slate-400 leading-relaxed">
+            Security is our priority. Ultron operates with strict user authorization and a whitelist of
+            `allowed_commands`. You have full control over the execution environment, with options for Docker-based
+            sandboxing to ensure your host system remains protected.
+          </div>
+        </details>
+
+        <details class="faq-item group glass rounded-2xl overflow-hidden border border-white/5 transition-all">
+          <summary class="flex items-center justify-between p-6 cursor-pointer list-none">
+            <span class="text-lg font-semibold pr-4">Can I integrate my own custom tools?</span>
+            <div
+              class="w-6 h-6 flex items-center justify-center rounded-full border border-white/10 group-open:rotate-180 transition-transform">
+              <i class="fas fa-chevron-down text-xs"></i>
+            </div>
+          </summary>
+          <div class="px-6 pb-6 text-slate-400 leading-relaxed">
+            Absolutely. Ultron is built on a modular "Skill" architecture. You can easily add new
+            Python-driven tools to the `tools.py` registry and map them to new intents in the configuration.
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-12 border-t border-white/5 relative z-10 bg-darker">
+    <div class="container mx-auto px-6">
+      <div class="flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
+        <div class="flex items-center space-x-2">
+          <div class="w-8 h-8 bg-gradient-to-br from-primary to-accent rounded-md flex items-center justify-center">
+            <i class="fas fa-robot text-dark text-sm"></i>
+          </div>
+          <span class="font-display font-bold text-xl tracking-tight">ULTRON</span>
+        </div>
+
+        <div class="text-slate-500 text-sm">
+          &copy; 2026 CampShure Technologies. All rights reserved.
+        </div>
+
+        <div class="flex space-x-6 text-slate-400">
+          <a href="#" class="hover:text-primary transition-colors"><i class="fab fa-github"></i></a>
+          <a href="#" class="hover:text-primary transition-colors"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="hover:text-primary transition-colors"><i class="fab fa-discord"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>

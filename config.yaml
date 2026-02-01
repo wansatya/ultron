@@ -1,0 +1,58 @@
+# Messaging Platforms
+# Enable the platforms you want to use
+platforms:
+  telegram:
+    enabled: true
+    bot_token: "${TELEGRAM_BOT_TOKEN}"
+    allowed_users: []  # Empty = allow all
+
+  discord:
+    enabled: false
+    bot_token: "${DISCORD_BOT_TOKEN}"
+    allowed_users: []
+
+  slack:
+    enabled: false
+    bot_token: "${SLACK_BOT_TOKEN}"
+    app_token: "${SLACK_APP_TOKEN}"  # Required for Socket Mode
+    allowed_users: []
+
+  whatsapp:
+    enabled: false
+    profile_path: "./data/whatsapp_session"  # Session storage
+    allowed_users: []
+
+# Models
+models:
+  intent_classifier:
+    model_name: "facebook/bart-large-mnli"  # Zero-shot
+    device: "cpu"
+    batch_size: 1
+
+  response_generator:
+    model_name: "google/flan-t5-small"
+    device: "cpu"
+    max_length: 256
+
+# Tools
+tools:
+  system:
+    enabled: true
+    sandbox: false  # Run commands in sandbox mode
+    allowed_commands: []  # Empty = allow all
+
+  web:
+    enabled: true
+    timeout: 10
+    user_agent: "Ultron/1.0"
+
+# Sessions
+sessions:
+  storage_path: "./data/sessions"
+  max_history: 50
+  reset_on_error: false
+
+# Skills
+skills:
+  enabled: true
+  directory: "./skills"
